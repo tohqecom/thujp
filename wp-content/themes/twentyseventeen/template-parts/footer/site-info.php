@@ -15,7 +15,10 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyseventeen' ) ); ?>" class="imprint">
-		<?php printf( __( 'Proudly powered by %s', 'twentyseventeen' ), 'WordPress' ); ?>
-	</a>
+ベトナムワーク<br>
+東京都新宿区高田馬場1ー33ー6平和相互403<br>
+Lê Hưng: 090-3535-8691<br>
+Lan Nguyễn: 080-9875-4489<br>
+Thu Thu: 090-4753-8899<br>
+Bi Bi (HUYEN) : 090-8438-5157<br>
 </div><!-- .site-info -->

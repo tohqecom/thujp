@@ -560,6 +560,17 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
+// Show posts of 'post', 'page', 'acme_product' and 'movie' post types on home page
+function search_filter( $query ) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ( $query->is_search ) {
+      $query->set( 'post_type', array( 'job', 'page', 'acme_product', 'movie' ) );
+    }
+  }
+}
+ 
+add_action( 'pre_get_posts','search_filter' );
+
 /**
  * Implement the Custom Header feature.
  */

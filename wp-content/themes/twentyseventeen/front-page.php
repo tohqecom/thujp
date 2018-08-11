@@ -18,8 +18,14 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<?php // Show the selected frontpage content.
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post();
+		$args = array(
+		  'post_type'   => 'job',
+		  'post_status' => 'publish'
+		  )
+		 );
+		$jobs = new WP_Query( $args );
+		if ( $jobs->have_posts() ) :
+			while ( $jobs->have_posts() ) : $job->the_post();
 				get_template_part( 'template-parts/page/content', 'front-page' );
 			endwhile;
 		else :
